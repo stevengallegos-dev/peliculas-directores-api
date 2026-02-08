@@ -67,7 +67,7 @@ DELETE /api/peliculas/{id}/
 
 Todos los endpoints bajo la ruta /api/ están protegidos mediante OAuth 2.0.
 
-### utenticación y Seguridad
+### Autenticación y Seguridad
 
 La autenticación se implementó mediante OAuth 2.0 utilizando Django OAuth Toolkit.
 El flujo de autenticación consiste en la solicitud de un access_token, el envío del token en las peticiones protegidas y la validación del token por parte del backend para autorizar o rechazar el acceso a los recursos.
@@ -117,8 +117,8 @@ El backend se encuentra completamente funcional, con el CRUD implementado, segur
 
 ### Autor
 
-Steven Gallegos
-Ingeniería de Software – UISEK
+- Steven Gallegos
+- Ingeniería de Software – UISEK
 
 ### Nota Final
 
