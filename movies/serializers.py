@@ -12,4 +12,4 @@ class DirectorSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Director
-        fields = '__all__'
+        fields = ['id', 'nombre', 'nacionalidad', 'fecha_nacimiento', 'foto', 'peliculas']
