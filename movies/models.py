@@ -3,13 +3,16 @@ from django.db import models
 class Director(models.Model):
     nombre = models.CharField(max_length=100)
     nacionalidad = models.CharField(max_length=60, blank=True)
-    fecha_nacimiento = models.DateField(null=True, blank=True)
 
-    # NUEVO: foto en Base64
+    # NUEVO: descripción tipo bio
+    descripcion = models.TextField(blank=True)
+
+    # foto en Base64
     foto = models.TextField(blank=True)
 
     def __str__(self):
         return self.nombre
+
 
 
 class Pelicula(models.Model):
