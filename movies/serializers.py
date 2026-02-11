@@ -9,10 +9,8 @@ class DirectorMiniSerializer(serializers.ModelSerializer):
 
 
 class PeliculaSerializer(serializers.ModelSerializer):
-    # Para MOSTRAR el director con nombre
     director = DirectorMiniSerializer(read_only=True)
 
-    # Para CREAR / EDITAR usando el ID
     director_id = serializers.PrimaryKeyRelatedField(
         queryset=Director.objects.all(),
         source='director',

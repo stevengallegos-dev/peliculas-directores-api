@@ -6,10 +6,8 @@ from .serializers import DirectorSerializer, PeliculaSerializer
 
 class ReadOnlyOrAuthenticated(viewsets.ModelViewSet):
     def get_permissions(self):
-        # COMO tus vistas públicas: index(), lista_entrenadores()
         if self.request.method in ["GET", "HEAD", "OPTIONS"]:
             return [AllowAny()]
-        # COMO tus vistas con @login_required: add/edit/delete
         return [IsAuthenticated()]
 
 
